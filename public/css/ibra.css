@@ -15,6 +15,13 @@
 .rond:hover{
 	border:1px solid #f38c18;
 }
+
+.list{
+	list-style-type: none;
+	border:1px solid black;
+	width: 25%;
+	height: 100px;
+}
 .label{
 	font-size: 1.2em;
 	margin-left: 20px;
