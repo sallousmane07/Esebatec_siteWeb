@@ -1,0 +1,25 @@
+.form-1{
+	display: flex;
+	flex-wrap: wrap;
+	background-color:#d2dde9; 
+	padding: 10px;
+}
+.rond{
+	border:1px solid #ebebeb;
+	border-radius:25px;
+	padding-left: 20px;
+	outline: none;
+	height: 30px;
+	width: 100%;
+}
+.rond:hover{
+	border:1px solid #f38c18;
+}
+.label{
+	font-size: 1.2em;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+#texteese{
+	height: 100px;
+}
