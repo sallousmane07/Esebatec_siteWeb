@@ -18,8 +18,11 @@
 
 .list{
 	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
 	border:1px solid black;
-	width: 25%;
+	background-color: red;
+	width: 50%;
 	height: 100px;
 }
 .label{

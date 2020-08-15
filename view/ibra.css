@@ -1,0 +1,49 @@
+.input-long{
+	padding-left: 20px;
+	outline: none;
+	height: 50px;
+	border-radius:25px;
+	border:1px solid #ebebeb;
+	width: 100%;
+}
+.input-long:hover{
+	border:1px solid grey;
+}
+.input-moyen{
+	padding-left: 20px;
+	outline: none;
+	border-radius:25px;
+	border:1px solid #ebebeb;
+	height: 50px;
+	width: 50%;
+}
+.input-moyen:hover{
+	border:1px solid grey;
+}
+.input-court{
+	padding-left: 20px;
+	outline: none;
+	height: 50px;
+	border-radius:25px;
+	border:1px solid #ebebeb;
+	width: 20%;
+}
+.input-court:hover{
+	border:1px solid grey;
+}
+.list{
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: grey;
+	width: 20%;
+	height: 200px;
+}
+.list-item{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	background-color: navy;
+	height: 200px;
+	width: 20%;
+}
