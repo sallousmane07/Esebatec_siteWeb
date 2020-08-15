@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="../public/css/ahmad.css">
+        <link rel="stylesheet" href="../public/css/makhtar.css">
+        <link rel="stylesheet" href="../public/css/ibra.css">
+        <link rel="stylesheet" href="../public/css/mouhamed.css">
+    </head>
+    <body>
+
+        <div class="header">
+            <!-- Navbar           -->
+            <nav class="navbar">
+                <a class="nav-bar-logo">
+                    <img class="logo" src="../public/images/log.png" alt="">
+                </a>
+                <button class="navbar-toggler">
+
+                </button>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acceuil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" >Présentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Métier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Réalisation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacter-Nous</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="slide-1" id="slide_1">
+            <div class="slide-content" id="slide-content">
+                <div class="slide1-item slide1-item-selected" style=" background-image: linear-gradient(to top,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+                                                 url('../public/images/1.png');">
+
+                </div>
+                <div class="slide1-item" style="background-image:linear-gradient(to top,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+                                                                  url('../public/images/2.png');">
+
+                </div>
+            </div>
+
+            <button class="slide-btn slide-btn-left"></button>
+            <button class="slide-btn slide-btn-right"></button>
+
+        </div>
+        <button onclick="next_slide()"> test</button>
+        <script>
+            function transition_one(parent){
+                var element = document.createElement('div');
+                element.classList.add("transition-top");
+                element.setAttribute("id","transition-top");
+                parent.appendChild(element);
+            }
+            function transitionTop(parent,slide1,slide2){
+                console.log(slide2);
+                slide2.style.top = "100%";
+                slide2.style.zIndex="3";
+                slide1.style.zIndex="2";
+                transition_one(slide2);
+                var element = document.querySelector("#transition-top");
+                element.style.bottom="100%";
+
+            }
+
+            function afterTransitionTop(parent,slide1,slide2){
+                var element = document.querySelector("#transition-top");
+               element.style.height="0px";
+               // slide2.removeChild(element);
+            }
+            function next_slide(){
+                var slide_items = document.querySelectorAll(".slide1-item");
+                console.log("\n");
+                console.log(slide_items);
+                var i=0;
+                for (i=0;i<slide_items.length;i++){
+                    var parent = document.querySelector("#slide-content")
+                    if(slide_items[i].classList.contains("slide1-item-selected")){
+                        slide_items[i].classList.remove("slide1-item-selected");
+
+                        if(i == slide_items.length-1){
+                            transitionTop(parent,slide_items[i],slide_items[0]);
+                            slide_items[0].classList.add("slide1-item-selected");
+                            setTimeout(
+                                function(){
+                                    afterTransitionTop(parent,slide_items[i],slide_items[0]);
+                                },2000);
+                        }
+                        else{
+                            transitionTop(parent,slide_items[i],slide_items[i+1]);
+                            slide_items[i+1].classList.add("slide1-item-selected");
+                            setTimeout(
+                                function(){
+                                    afterTransitionTop(parent,slide_items[i],slide_items[0]);
+                                },2000);
+                        }
+                        slide_items[i].style.zIndex=1;
+                        break;
+                    }
+                }
+                console.log("\n");
+                console.log(slide_items);
+
+            }
+            window.addEventListener('load',function(e){
+                next_slide();
+            });
+        </script>
+
+    </body>
+</html>
