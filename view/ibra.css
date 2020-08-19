@@ -1,49 +1,61 @@
-.input-long{
-	padding-left: 20px;
-	outline: none;
-	height: 50px;
-	border-radius:25px;
-	border:1px solid #ebebeb;
-	width: 100%;
+body{
+	padding:50px;
 }
-.input-long:hover{
-	border:1px solid grey;
-}
-.input-moyen{
-	padding-left: 20px;
-	outline: none;
-	border-radius:25px;
-	border:1px solid #ebebeb;
-	height: 50px;
-	width: 50%;
-}
-.input-moyen:hover{
-	border:1px solid grey;
-}
-.input-court{
-	padding-left: 20px;
-	outline: none;
-	height: 50px;
-	border-radius:25px;
-	border:1px solid #ebebeb;
-	width: 20%;
-}
-.input-court:hover{
-	border:1px solid grey;
-}
-.list{
-	list-style-type: none;
+.circuit{
 	display: flex;
-	flex-wrap: wrap;
-	background-color: grey;
-	width: 20%;
-	height: 200px;
+	flex-direction:row;
+	height:200px;
+	background-color: orangered;
+	width: 400px;
+	border-radius: 10px;
 }
-.list-item{
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	background-color: navy;
-	height: 200px;
-	width: 20%;
+.interupteur-nord{
+	height:50px;
+	width: 50px;
+	border-radius: 25px;
+	background-color: black;
+	margin-top:-25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.interupteur-nord-est{
+	height:50px;
+	width: 50px;
+	border-radius: 25px;
+    background-color: black;
+	margin-top:-25px;
+	margin-left:10px;
+}
+.interupteur-nord-ouest{
+	height:50px;
+	width: 50px;
+	border-radius: 25px;
+	background-color: black;
+	margin-left: 300px;
+	margin-top:-25px;
+}
+.interupteur-sud{
+	height: 50px;
+	border-radius: 25px;
+	width: 50px;
+	margin-top: 170px;
+	margin-left:auto;
+	margin-right: auto;
+	background-color: black;
+}
+.interupteur-sud-est{
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	background-color: black;
+	margin-top: 170px;
+	margin-left: 10px;
+}
+.interupteur-sud-ouest{
+	width:50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 25px;
+	margin-top: 170px;
+	margin-left: 320px;
 }
