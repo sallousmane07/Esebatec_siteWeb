@@ -1,5 +1,12 @@
 <?php
-
+    namespace model;
+    
     class Equipe{
-        publi
+        private $_id;
+        private $_prenom;
+        private $_nom;
+        private $_function;
+        private $_descFunction;
+
+    
     }

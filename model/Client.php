@@ -1,7 +1,6 @@
     <?php
-        // client Model
-
-        namespace  model;
+    
+    namespace model;
 
 
         class Client{
