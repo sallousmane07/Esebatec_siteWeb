@@ -1,7 +1,7 @@
 
 /*card1 : img ,circuit , interupteur, hv-pousser-devant*/
 
-/*card boule ouverte : circuit, interupteur*/
+/*card boule fermé : circuit, interupteur*/
 
 }
 
@@ -23,7 +23,11 @@
 */
 
 .card{
-
+    background-color: orangered;
+	width: 46%;
+	height: 70vh;
+	display: flex;
+	flex-direction: row;
 }
 
 
@@ -46,7 +50,7 @@
 }
 
 .card-moyen{
-	/*par rapport au max width*/
+    /*par rapport au max width*/
 }
 
 
@@ -418,7 +422,7 @@
 	margin-top: 1em;
 }
 .mb1,.my1,.m1{
-	margin-bottom: 1em;
+	margin-bottom: 1em;        
 }
 /*---------------------------------------------------------------------------------------
 |							padding

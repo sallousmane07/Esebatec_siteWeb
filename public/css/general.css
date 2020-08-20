@@ -481,6 +481,7 @@
 
 .col-md-6 {
     width: calc((100% / 12) * 6);
+    background-color: black;
 }
 
 .col-md-5 {
