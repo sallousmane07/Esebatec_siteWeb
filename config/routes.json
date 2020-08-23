@@ -1,0 +1,7 @@
+{
+    "/Esebatec_siteWeb/": "TestController@test",
+    "Esebatec_siteWeb/Test": "",
+    "/Esebatec_siteWeb/home": "Controller@home",
+    "/Esebatec_siteWeb/Service/?nomsService": "Service@oneService"
+
+}
