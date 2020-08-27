@@ -1,0 +1,11 @@
+{
+    "projet_name": {
+        "database": "mysql",
+        "host": "localhost",
+        "port": 3306,
+        "name": "esebatec_site",
+        "user": "ass",
+        "pwd": "ok"
+
+    }
+}
