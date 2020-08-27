@@ -1,122 +1,167 @@
 <html>
-    <head>
-        <meta charset="utf8">
-        <link rel="stylesheet" href="../public/css/ahmad.css">
-        <link rel="stylesheet" href="../public/css/makhtar.css">
-        <link rel="stylesheet" href="../public/css/ibra.css">
-        <link rel="stylesheet" href="../public/css/mouhamed.css">
-    </head>
-    <body>
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="../public/css/ahmad.css">
+    <link rel="stylesheet" href="../public/css/makhtar.css">
+    <link rel="stylesheet" href="../public/css/ibra.css">
 
-        <div class="header">
-            <!-- Navbar           -->
-            <nav class="navbar">
-                <a class="nav-bar-logo">
-                    <img class="logo" src="../public/images/log.png" alt="">
-                </a>
-                <button class="navbar-toggler">
+    <link rel="stylesheet" href="../public/css/slider.css">
 
-                </button>
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Acceuil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" >Présentation</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Métier</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Réalisation</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacter-Nous</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+    <link rel="stylesheet" href="../public/css/mouhamed.css">
+</head>
+<body>
+
+<div class="header">
+    <!-- Navbar           -->
+    <nav class="navbar">
+        <a class="nav-bar-logo">
+            <img class="logo" src="../public/images/log.png" alt="">
+        </a>
+        <button class="navbar-toggler">
+
+        </button>
+        <div class="navbar-collapse">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Présentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Métier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Réalisation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacter-Nous</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+</div>
 
-        <div class="slide-1" id="slide_1">
-            <div class="slide-content" id="slide-content">
-                <div class="slide1-item slide1-item-selected" style=" background-image: linear-gradient(to top,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
-                                                 url('../public/images/1.png');">
+<div class="slide-1" id="slide_1">
+    <div class="slide-content" id="slide-content">
 
-                </div>
-                <div class="slide1-item" style="background-image:linear-gradient(to top,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
-                                                                  url('../public/images/2.png');">
-
-                </div>
+        <div class="slide1-item slide1-item-selected" style=" background-image: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+                                                 url('../public/images/2_1.png');">
+            <input type="hidden" value="transitionBottom" class="name-transition">
+            <div class="slider-item-content content-composant" style="display: none;">
+                <div class="txtx-from-top  text" style="margin-top:100px;">Bonjour</div>
+                <br>
+                <div class="txtx-from-bottom btext">Big A test et test big big</div>
+                <br>
+                <button class="txtx-from-bottom btn-primary txtx-delay-100"> TestButton</button>
             </div>
 
-            <button class="slide-btn slide-btn-left"></button>
-            <button class="slide-btn slide-btn-right"></button>
+        </div>
+        <div class="slide1-item" style="background-image:linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+                                                                  url('../public/images/p1.jpg');">
+            <input type="hidden" value="transitionTop" class="name-transition">
+            <div class="slider-item-content content-composant" style="display: none;">
+                <div class="txtx-from-top  text" style="margin-top:100px;">Bonjour</div>
+                <br>
+                <div class="txtx-from-top txtx-delay-100 btext">Big test et test big big</div>
+                <br>
+                <button class="txtx-from-top btn-primary txtx-delay-200"> TestButton</button>
+            </div>
 
         </div>
-        <button onclick="next_slide()"> test</button>
-        <script>
-            function transition_one(parent){
-                var element = document.createElement('div');
-                element.classList.add("transition-top");
-                element.setAttribute("id","transition-top");
-                parent.appendChild(element);
-            }
-            function transitionTop(parent,slide1,slide2){
-                console.log(slide2);
-                slide2.style.top = "100%";
-                slide2.style.zIndex="3";
-                slide1.style.zIndex="2";
-                transition_one(slide2);
-                var element = document.querySelector("#transition-top");
-                element.style.bottom="100%";
+        <div class=" composant-selected" id="composant1">
 
-            }
+        </div>
+        <div class="content-composant composant-no-selected" id="composant2">
 
-            function afterTransitionTop(parent,slide1,slide2){
-                var element = document.querySelector("#transition-top");
-               element.style.height="0px";
-               // slide2.removeChild(element);
-            }
-            function next_slide(){
-                var slide_items = document.querySelectorAll(".slide1-item");
-                console.log("\n");
-                console.log(slide_items);
-                var i=0;
-                for (i=0;i<slide_items.length;i++){
-                    var parent = document.querySelector("#slide-content")
-                    if(slide_items[i].classList.contains("slide1-item-selected")){
-                        slide_items[i].classList.remove("slide1-item-selected");
+        </div>
+    </div>
 
-                        if(i == slide_items.length-1){
-                            transitionTop(parent,slide_items[i],slide_items[0]);
-                            slide_items[0].classList.add("slide1-item-selected");
-                            setTimeout(
-                                function(){
-                                    afterTransitionTop(parent,slide_items[i],slide_items[0]);
-                                },2000);
-                        }
-                        else{
-                            transitionTop(parent,slide_items[i],slide_items[i+1]);
-                            slide_items[i+1].classList.add("slide1-item-selected");
-                            setTimeout(
-                                function(){
-                                    afterTransitionTop(parent,slide_items[i],slide_items[0]);
-                                },2000);
-                        }
-                        slide_items[i].style.zIndex=1;
-                        break;
+    <button class="slide-btn slide-btn-left"></button>
+    <button class="slide-btn slide-btn-right"></button>
+
+</div>
+<button onclick="slider.play();"> test</button>
+<script src="../public/js/transition.js"></script>
+<script>
+
+
+    function Slider2(idElement) {
+        this.idElement = idElement;
+        this.transitions = TransitionFactory();
+        this.element = function () {
+            if (document.querySelector("#" + idElement)) {
+                return document.querySelector("#" + idElement);
+            } else {
+                console.error("l id du slider n'existe pas");
+            }
+        }
+        this.content = function () {
+            if (document.querySelector("#slide-content")) {
+                return this.element().querySelector("#slide-content");
+            } else {
+                console.error("slide content n'est pas disponible dans l'element");
+            }
+        }
+        this.sliders = function () {
+            return this.element().querySelectorAll(".slide1-item");
+        }
+        this.courantSlide = function () {
+            var courant = this.element().querySelector(".slide1-item-selected");
+            if (!courant) {
+                courant = this.nextSlide()[0];
+                courant.classList.add("slide1-item-selected");
+            }
+            return courant;
+        }
+        this.nextSlide = function () {
+            var slide_items = this.sliders();
+            for (i = 0; i < slide_items.length; i++) {
+                if (slide_items[i].classList.contains("slide1-item-selected")) {
+                    var next = slide_items[i + 1];
+                    if (i == slide_items.length - 1) {
+                        next = slide_items[0];
                     }
+                    return next;
                 }
-                console.log("\n");
-                console.log(slide_items);
-
             }
-            window.addEventListener('load',function(e){
-                next_slide();
-            });
-        </script>
+            return null;
+        }
 
-    </body>
+        this.go = null;
+
+        this.play = function () {
+            this.go = setTimeout(function (slider) {
+                var courant = slider.courantSlide();
+                var next = slider.nextSlide();
+                var content = slider.content();
+                console.log("NEXT");
+                var nameTransition = next.querySelector(".name-transition").value;
+
+                if (nameTransition) {
+                    var methode = slider.transitions[nameTransition];
+                    var transition = methode(content, courant, next, 1.5);
+                    transition.start();
+                }
+
+
+            }, 1000, this);
+        }
+        this.pause = function () {
+            clearTimeout(this.go());
+        }
+
+    }
+
+
+    window.addEventListener('load', function (e) {
+
+        slider.play();
+    });
+
+    var slider = new Slider2('slide_1');
+</script>
+
+</body>
 </html>

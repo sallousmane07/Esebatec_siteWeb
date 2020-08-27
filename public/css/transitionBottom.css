@@ -1,0 +1,75 @@
+
+/*Transition bottom pre*/
+.transitionBottom-element{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    background-size: auto;
+    background-position: 0px 50px;;
+}
+.transitionBottom-slider2-pre
+{
+    height: 0px;
+    transition: none;
+    z-index: 5;
+    background-position: 0px 250px;
+}
+.transitionBottom-slider1-pre{
+    z-index: 5;
+    height: 100%;
+
+}
+
+
+
+/*Transition bottom etap1*/
+.transitionBottom-element-etape1{
+    background-position: 0px 0px;
+
+}
+.transitionBottom-slider1-etape1{
+    height: 0px;
+    background-position: 0px -100%;
+}
+.transitionBottom-slider2-etape1{
+    z-index: 5;
+    transition:all 6s cubic-bezier(.18,.02,.73,.99);
+
+}
+
+/*transiton etap 2*/
+.transitionBottom-element-etape2{
+
+
+}
+.transitionBottom-slider1-etape2{
+
+}
+.transitionBottom-slider2-etape2{
+    height: 100%;
+    background-position: center top;
+}
+
+
+.transitionBottom-composant{
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.glass{
+    position: absolute;;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left:0px;
+}

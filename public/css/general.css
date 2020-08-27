@@ -112,40 +112,81 @@
 
 */
 
-​ .circuit {
-    ​
-}
 
-.interupteur {
-    ​
+.circuit{
+    background-color: orangered;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    height: 30vh;
+    width: 30%;
 }
-
-.interupteur-nord {
-    ​
+.circuit-absolute-nord{
+    width: 100%;
+    position: absolute;
+    height: 8vh;
+    top: -10%;
 }
-
-.interupteur-est {
-    ​
+.interupteur-nord{
+    background-color: black;
+    border-radius: 50px 50px 50px 50px;
+    width: 14%;
+    height: 8vh;
+    margin:0 auto;
 }
-
-.interupteur-ouest {
-    ​
+.interupteur-nord-est{
+    background-color: black;
+    position: absolute;
+    border-radius: 50px 50px 50px 50px;
+    width: 14%;
+    height: 8vh;
+    margin-left: 4%;
 }
-
-.interupteur-sud {
-    ​
+.interupteur-nord-ouest{
+    background-color: black;
+    border-radius: 50px 50px 50px 50px;
+    width: 14%;
+    height: 8vh;
+    margin-left: 82%;
 }
-
-.interupteur-nord-est {
-    ​
+.circuit-sud{
+    background-color: orangered;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    height: 30vh;
+    width: 30%;
 }
-
-.interupteur-sud-ouest {
-    ​
+.circuit-absolute-sud{
+    width: 100%;
+    position: absolute;
+    height: 8vh;
+    bottom:-10%;
 }
-
-.interupteur-sud-est {
-    ​
+.interupteur-sud{
+    background-color: black;
+    border-radius: 50px 50px 50px 50px;
+    width: 14%;
+    height: 8vh;
+    margin:0 auto;
+}
+.interupteur-sud-est{
+    background-color: black;
+    border-radius: 50px 50px 50px 50px;
+    position: absolute;
+    width: 14%;
+    height: 8vh;
+    margin-left: 4%;
+}
+.interupteur-sud-ouest{
+    background-color: black;
+    border-radius: 50px 50px 50px 50px;
+    position: absolute;
+    width: 14%;
+    height: 8vh;
+    margin-left: 82%;
 }
 
 

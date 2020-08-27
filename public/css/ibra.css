@@ -1,25 +1,65 @@
-.form-1{
+.general{
+	padding: 50px;
 	display: flex;
-	flex-wrap: wrap;
-	background-color:#d2dde9; 
-	padding: 10px;
+	flex-direction:column;
+	justify-content: space-around;
+	word-spacing: 10px;
 }
-.rond{
-	border:1px solid #ebebeb;
-	border-radius:25px;
-	padding-left: 20px;
-	outline: none;
-	height: 30px;
-	width: 100%;
+.circuit{
+	background-color: orangered;
+	border-radius: 10px;
+	height: 30vh;
+	width: 30%;
 }
-.rond:hover{
-	border:1px solid #f38c18;
+.interupteur-nord{
+	background-color: black;
+	border-radius: 50px 50px 50px 50px;
+	width: 14%;
+	height: 8vh;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -24px;
 }
-.label{
-	font-size: 1.2em;
-	margin-left: 20px;
-	padding-left: 20px;
+.interupteur-nord-est{
+	background-color: black;
+	margin-left: 10px;
+	border-radius: 50px 50px 50px 50px;
+	margin-top: -24px;
+	width: 14%;
+	height: 8vh;
 }
-#texteese{
-	height: 100px;
+.interupteur-nord-ouest{
+	background-color: black;
+	float: right;
+	border-radius: 50px 50px 50px 50px;
+	margin-right: 10px;
+	margin-top: -24px;
+	width: 14%;
+	height: 8vh;
+}
+.interupteur-sud{
+	background-color: black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 168px;
+	border-radius: 50px 50px 50px 50px;
+	width: 14%;
+	height: 8vh;
+}
+.interupteur-sud-est{
+	background-color: black;
+	margin-top: 168px;
+	margin-left: 10px;
+	border-radius: 50px 50px 50px 50px;
+	width: 14%;
+	height: 8vh;
+}
+.interupteur-sud-ouest{
+	background-color: black;
+	float: right;
+	margin-right: 10px;
+	margin-top: 168px;
+	border-radius: 50px 50px 50px 50px;
+	width: 14%;
+	height: 8vh;
 }

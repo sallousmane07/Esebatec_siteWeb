@@ -1,9 +1,18 @@
 
+@font-face {
+    font-family: "Open Sans";
+    src: url("open_sans/OpenSans-Regular.ttf") format("truetype");
+}
 
+@font-face {
+    font-family: "robotod";
+    src: url("roboto/Roboto-Thin.ttf") format("truetype");
+}
 /* salut c est mouhamed*/
 body{
     padding: 0;
     margin: 0;
+    font-family: 'robotod';
 }
 .header{
     position: absolute;
@@ -25,13 +34,15 @@ body{
     align-items: center;;
 }
 .nav-bar-logo{
-;
-}
-.logo{
-    height: 71;
-}
-.navbar-collapse{
 
+}
+
+.logo{
+    height: 71px;
+}
+
+.navbar-collapse{
+;
 }
 
 .navbar-nav{
@@ -44,71 +55,45 @@ body{
     padding-left: 20px;
     padding-right: 20px;
     font-weight: 400;
+    color: white;
 }
 .nav-link{
     text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
 }
-
-.slide-1{
-    position: relative;
-    height: 37rem;
-}
-
-.slide-content{
-    overflow: hidden;;
-    position: absolute;
-    height: 37rem;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    transition:all 2s;
-
-}
-.slide-content::-webkit-scrollbar {
-    display: none;
-
-}
-.slide1-item{
-    width:100%;
-    height: 37rem;
-
-    background-color: grey;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left:0px;
-    z-index: 1;
-    transition: all 2s ease;
-
-}
-.slide1-item-selected{
-    z-index: 3;
-}
-.slide-btn{
-    position:absolute;
+.navbar-toggler{
     display: none;
 }
+
+
+
 
 /*
 |--------------------------
 | Transition
 |--------------------------
 */
-@keyframes transitionTopAnime {
-    from{
-        top:200%;
-    }
-    to{
-        top:-100%;
-    }
+
+
+.btn-primary{
+    background: orange;
+    color: dimgray;
+    font-size: 2.0em;
+    padding: 10px 20px;
+    border-radius: 45px;
 }
-.transition-top{
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top,rgba(0,0,0,0.6),rgba(0,0,0,0.6));
-    transition:height 2s ease-in-out;
-    z-index: 999;
+.text{
+    font-size: 32px;
+    font-weight: 100;
+    font-family: robotod;
+
+
+}
+
+.btext{
+    font-size: 65px;
+    font-family: robotod;
+
 }
