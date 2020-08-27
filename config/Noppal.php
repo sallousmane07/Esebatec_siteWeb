@@ -5,12 +5,11 @@ namespace config;
 
 class Noppal{
 
-
-
-
+   private static $tabVars=[];
+   
    //recuperation des routes dans le fichier json routes.json
    private static function getRoutes(){
-      $json=file_get_contents("config/routes.json");
+   $json=file_get_contents("config/routes.json");
      return json_decode($json);
      
    }
@@ -22,11 +21,11 @@ class Noppal{
    //point d'entrée de notre application 
    public function main(){     
 
-      $ControlMethod = self::getControllerMethod(self::findUrl("$_SERVER[REQUEST_URI]"));
+      $ControlMethod = self::getControllerMethod(self::findRoute("$_SERVER[REQUEST_URI]"));
 
       $method = $ControlMethod[1];
       $controller= $ControlMethod[0];
-
+      
       $maClasse="controller\\".$controller;
       $control = new $maClasse();
                
@@ -45,28 +44,6 @@ class Noppal{
    /** getControllerMethod recupere le controller et la methode à exécuter de la chaine */
    public static function getControllerMethod($chaine){
      
-      
-      /*
-      $trouve=true;
-      
-
-      for ($i=0; $i<strlen($chaine) ; $i++) { 
-         
-         if($chaine[$i]==='@'){
-            self::$method=substr($chaine,$i+1);
-            self::$controller=substr($chaine,0,$i);
-            $trouve=false;  
-
-         break;    
-         }
-      }
-      
-      if($trouve==true){         
-         self::$controller=$chaine;
-         self::$method="start";
-      }   */
-
-
 
      $chaines = explode('@',$chaine);
 
@@ -79,20 +56,50 @@ class Noppal{
 
 
 
-   public static function findUrl($url){
+   public static function findRoute($url){
    
       $routes=self::getRoutes();
 
       foreach ($routes as $keyRoute => $route) {
-           if($keyRoute===$url)
-               return $route;
-            else 
-               return "HomeController@home";
-
-              //echo "La page n'existe pas dans les routes";// redirection page 404 not Found
+           if(self::findUrl($keyRoute,$url))
+               return $route;          
           
       }
+     echo "La page n'existe pas dans les routes";// redirection page 404 not Found
    }
+
+
+   public static function findUrl($urlJson, $urlServeur){
+
+      // a revoir si le fichier .htaccess marche
+      $urlJson=explode('/',$urlJson);
+      $urlServeur=explode('/',$urlServeur);
+      
+     // echo count($urlJson); die();  
+      
+      if(count($urlServeur)!=count($urlJson))
+         return false;
+      else{
+         for($i=0;$i<count($urlJson);$i++){
+            if($urlJson[$i]!=""){//pas si claire que ça (tu dois supprimer les 1ers et la derniere si l'url termine pas /)
+               if($urlJson[$i][0]==='&'){
+                  $nameVar=substr($urlJson[$i],1);
+                  self::$tabVars[$nameVar]=$urlServeur[$i];
+                  
+               }
+               elseif(strcmp($urlJson[$i],$urlServeur[$i])!=0){               
+                  return false;            
+               }
+            }
+         }
+      }
+
+      return true;
+
+
+
+   }
+
 
 
 

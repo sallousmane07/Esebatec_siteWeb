@@ -1,8 +1,1 @@
-{
-    "id": 1,
-    "titre": "Titre",
-    "sous_titre": "Sous_Titre",
-    "date_publie": "01/06/2019",
-    "date_modif": "02/03/2020",
-    "texte ": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam incidunt, veritatis eaque ratione atque, numquam explicabo voluptas, magnam sint vel quam repellat aperiam architecto consectetur nobis quae rem? Doloribus, illum!"
-}
+{"dk Deux":{"\u0000model\\Article\u0000_id":2,"\u0000model\\Article\u0000_titre":"dk Deux","\u0000model\\Article\u0000_sousTitre":"le sous titre je ne sais pas","\u0000model\\Article\u0000_datePublie":null,"\u0000model\\Article\u0000_dateModif":null,"\u0000model\\Article\u0000_categorieArticle":null,"\u0000model\\Article\u0000_signetUser":null}}

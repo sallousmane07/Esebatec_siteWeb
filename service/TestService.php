@@ -10,15 +10,17 @@ use service\ArticleService;
 use model\Article;
 
     
-    $article = new ArticleService("articles","Article","titre");
+    $article = new ArticleService();
      
-    $tab['id']=1;
-    $tab['titre']="article test";
-    $tab['sousTitre']="sous titre";
+    $tab['id']=2;
+    $tab['titre']="dk Deux";
+    $tab['sousTitre']="le sous titre je ne sais pas";
+    
     
     $art = new Article($tab);
     
     $article->saveObjJson($art);
+
 
 
 

@@ -9,13 +9,12 @@ class Autoloader
 
 
     static function autoload($class) {
-        try {
-        
+        try {        
             $file_namespace = str_replace("\\", "/", $class.".php");
             $tab=explode('/', $file_namespace);
             $tab[count($tab)-1]='';
             $file_parent=rtrim(implode('/',$tab),'/').'.php';
-            echo 'oui';die();
+           
          
             if (file_exists($file_namespace)) { 
               

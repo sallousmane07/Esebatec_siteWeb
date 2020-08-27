@@ -10,7 +10,7 @@ class Article
             $_categorieArticle,
             $_signetUser;
 
-
+    //public function get
 	public function id()
     {
         return $this->_id;

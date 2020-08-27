@@ -11,6 +11,7 @@ class MysqlConnection{
         
         if(self::$_db==null){
 
+            
             $json = file_get_contents('config/connexionBD.json');
             $json_data = json_decode($json,true);
             $mysql=$json_data["projet_name"];
@@ -20,6 +21,7 @@ class MysqlConnection{
         }
 
         return self::$_db;
+
     }
 }
 
